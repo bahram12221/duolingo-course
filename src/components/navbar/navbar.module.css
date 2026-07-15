@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');*{
+  box-sizing: border-box;
+}
+
+.whiteColor{
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  list-style-type: none;
+  padding: 20px 0;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: orange;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo h3 span{
+  color: green;
+}
+.logo h3{
+  font-family: 'Permanent Marker', cursive;
+}
+.logo img{
+  width: 110px;
+}
+.bars, .xmark{
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+  .bars {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+  }
+
+  .xmark {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .block {
+    display: block;
+  }
+
+  .humbarger {
+    flex-direction: column;
+    display: flex;
+  }
+  .navbar {
+    width: 100px;
+    margin-top: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px white;
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    padding: 20px 30px;
+    gap: 10px;
+  }
+  
+  .logo h3{
+    font-size: 14px;
+  }
+  .logo img{
+    width: 80px;
+  }
+}

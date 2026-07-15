@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #2563eb;
+  border-radius: 50%;
+  filter: blur(120px);
+  top: -150px;
+  right: -100px;
+  opacity: 0.4;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #22c55e;
+  border-radius: 50%;
+  filter: blur(120px);
+  bottom: -150px;
+  left: -100px;
+  opacity: 0.25;
+}
+
+.left {
+  width: 35%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.showLeft {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.left h1 {
+  color: white;
+}
+.left p,
+h2 {
+  color: #cbd5e1;
+}
+
+.leftBtn button {
+  padding: 10px;
+  background: #3b82f6;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  border: none;
+  width: 150px;
+  margin: 10px;
+  font-weight: 5000;
+  color: white;
+}
+.left button:hover {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+}
+
+.right {
+  width: 35%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.right img {
+  width: 90%;
+}
+
+.right img {
+  opacity: 0;
+  transform: scale(0.7) translateY(30px);
+  animation: imgShow 0.8s ease forwards;
+}
+
+.right img:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.right img:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.right img:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.right img:nth-child(4) {
+  animation-delay: 0.8s;
+}
+@keyframes imgShow {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.right img {
+  animation:
+    imgShow 0.8s ease forwards,
+    floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@media(max-width: 1023px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    .left{
+        width: 80%;
+    }
+    .right{
+        width: 60%;
+    }
+    .right img{
+        width: 90%;
+    }
+}
+
+@media(max-width: 767px){
+    .left h1{
+        font-size: 22px;
+    }
+    .left h2{
+        font-size: 15px;
+    }
+    .left p{
+        font-size: 14px;
+    }
+    .left button{
+        width: 120px;
+        font-size: 10px;
+    }
+}
