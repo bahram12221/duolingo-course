@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         setShowLeft(true)
-    })
+    },[])
 
   return (
     <div>

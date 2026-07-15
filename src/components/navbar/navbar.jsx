@@ -1,7 +1,7 @@
 import style from "./navbar.module.css"
 import { NavLink } from "react-router-dom"
 import logo from "./logo.jpg"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useLocation } from "react-router-dom"
 
 function Navbar(){
