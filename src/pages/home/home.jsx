@@ -1,8 +1,8 @@
 import style from "./home.module.css";
-import img1 from "../imgs/homeImg1.jpg";
-import img2 from "../imgs/homeImg2.jpg";
-import img3 from "../imgs/homeImg3.jpg";
-import img4 from "../imgs/homeImg4.jpg";
+import img1 from "./imgs/homeImg1.jpg";
+import img2 from "./imgs/homeImg2.jpg";
+import img3 from "./imgs/homeImg3.jpg";
+import img4 from "./imgs/homeImg4.jpg";
 import { useState, useEffect } from "react";
 
 function Home() {
