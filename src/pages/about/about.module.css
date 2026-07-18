@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 8%;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e293b
+  );
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #2563eb;
+  border-radius: 50%;
+  filter: blur(130px);
+  top: -150px;
+  left: -150px;
+  opacity: 0.35;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #22c55e;
+  border-radius: 50%;
+  filter: blur(120px);
+  bottom: -120px;
+  right: -100px;
+  opacity: 0.25;
+}
+
+.container h1{
+    color: white;
+}
+
+.p{
+     color: #e2e8f0;
+     width: 60%;
+     text-align: justify;
+}
+.card1, .card2{
+    border-left: 3px solid gray;
+    padding-left: 20px;
+}
+.cards{
+    display: flex;
+    gap: 30px;
+}
+.card1 h3, .card2 h3{
+    color: white;
+}
+.card1 p, .card2 p{
+    color: #e2e8f0;
+}
+.imgs{
+    display: flex;
+    width: max-content;
+    animation: img 30s linear infinite;
+    gap: 10px;
+}
+.imgs img{
+    height: 130px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+}
+
+@keyframes img {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.imgsParent{
+    overflow: hidden;
+
+}
+
+@media(max-width: 767px){
+    .container h1{
+        font-size: 18px;
+    }
+    .imgs img{
+        height: 60px;
+    }
+    .p{
+        width: 100%;
+        font-size: 12px;
+    }
+    .card1 h3, .card2 h3{
+        font-size: 15px;
+    }
+    .card1 p, .card2 p{
+        font-size: 12px;
+    }
+}

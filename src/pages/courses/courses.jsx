@@ -11,6 +11,7 @@ import calligraphy from "./img/calligraphy.jpg";
 function Courses() {
   return (
     <div className={style.container}>
+      <h1>Our Courses</h1>
       <div className={style.parent}>
         <CoursesComponent
           img={english}
