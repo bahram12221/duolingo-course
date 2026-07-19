@@ -10,6 +10,12 @@ a li{
   color: white;
 }
 
+.activeLink {
+  background-color: rgb(63, 59, 255);
+  box-shadow: 0 0 10px blue;
+  padding:0 5px;
+  transition: all 0.5s ease;
+}
 .container {
   display: flex;
   justify-content: space-between;

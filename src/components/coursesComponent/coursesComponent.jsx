@@ -1,4 +1,5 @@
 import style from "./coursesComponent.module.css"
+import { NavLink } from "react-router-dom"
 
 function CoursesComponent(props){
     return(
@@ -11,7 +12,7 @@ function CoursesComponent(props){
                     <p><span>Type of education : </span>{props.typeOfEducation}</p>
                     <p><span>Duration : </span>{props.duration}</p>
                     <p><span>Monthly fee : </span>{props.fee}</p>
-                    <button>Register</button>
+                    <button><NavLink to="/register">Register</NavLink></button>
                 </div>
             </div>
 

@@ -45,8 +45,7 @@ p:nth-child(5) span,
 p:nth-child(6) span {
   font-weight: bold;
 }
-.card h2,
-p {
+.card h2, .card p {
   padding: 4px 20px;
 }
 

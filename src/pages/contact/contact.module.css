@@ -19,18 +19,11 @@
 .bgNone{
     background: none;
 }
-.bgNone::before{
-    background: none;
-}
-.bgNone::after{
-    background: none;
-}
 .container::before {
   content: "";
   position: absolute;
   width: 400px;
   height: 400px;
-  background: #2563eb;
   border-radius: 50%;
   filter: blur(130px);
   top: -150px;
@@ -44,7 +37,6 @@
   position: absolute;
   width: 350px;
   height: 350px;
-  background: #22c55e;
   border-radius: 50%;
   filter: blur(120px);
   bottom: -150px;
@@ -148,7 +140,7 @@
         font-size: 12px;
     }
     .contactIfo, .form{
-        width: 80%;
+        width: 90%;
     }
 
     .form input,
