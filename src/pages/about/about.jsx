@@ -7,10 +7,13 @@ import duolingo4 from "./imgs/duolingo4.jpg";
 import duolingo5 from "./imgs/duolingo5.jpg";
 import duolingo6 from "./imgs/duolingo6.jpg";
 import duolingo7 from "./imgs/duolingo7.jpg";
+import { useLocation } from "react-router-dom";
 
 function About() {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${isHome ? style.bgNone : ""}`}>
       <h1>About Duolingo Educational Center</h1>
       <div className={style.parent}>
         <div className={style.imgsParent}>

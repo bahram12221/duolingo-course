@@ -1,9 +1,15 @@
+import About from "../about/about";
+import Contact from "../contact/contact";
+import Courses from "../courses/courses";
+import Register from "../register/register";
 import style from "./home.module.css";
 import img1 from "./imgs/homeImg1.jpg";
 import img2 from "./imgs/homeImg2.jpg";
 import img3 from "./imgs/homeImg3.jpg";
 import img4 from "./imgs/homeImg4.jpg";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 
 function Home() {
     const [showLeft, setShowLeft] = useState(false)
@@ -13,7 +19,7 @@ function Home() {
     },[])
 
   return (
-    <div>
+    <div className={style.home}>
       <div className={style.container}>
         <div className={`${style.left} ${showLeft ? style.showLeft : ""}`}>
           <h1>Duolingo Learning Center</h1>
@@ -23,8 +29,8 @@ function Home() {
             calligraphy with modern methods and experienced teachers.
           </p>
           <div className={style.leftBtn}>
-            <button>Register for courses</button>
-            <button>View courses</button>
+            <NavLink to="/register"><button>Register for courses</button></NavLink>
+            <NavLink to="/courses"><button>View courses</button></NavLink>
           </div>
         </div>
         <div className={style.right}>
@@ -33,7 +39,12 @@ function Home() {
           <img src={img3} alt="img3" />
           <img src={img4} alt="img4" />
         </div>
+       
       </div>
+      <Courses />
+      <About />
+      <Contact />
+      <Register />
     </div>
   );
 }

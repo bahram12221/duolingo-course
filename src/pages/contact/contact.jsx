@@ -2,8 +2,12 @@ import style from "./contact.module.css";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import map from "./map.jpg"
+import { useLocation } from "react-router-dom";
+
 
 function Contact() {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
   const {
     register,
     handleSubmit,
@@ -15,9 +19,9 @@ function Contact() {
 
   function sendEmail(data) {
     emailjs
-      .send("service_i5i80na", "template_2sji2h9", data, "U5lhFdQ2eB8RJ06ql")
+      .send("service_io9rk44", "template_5aq1158", data, "v85TfCvYMU3ObAiHt")
       .then(() => {
-        alert("sended message successfully");
+        alert("Your message has been successfully sent will be answered soon.");
         reset();
       })
       .catch((error) => {
@@ -27,7 +31,7 @@ function Contact() {
   }
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${isHome ? style.bgNone : ""}`}>
         <div className={style.contactTitle}>
         <h1>Contact Us</h1>
         <h3>Get in Touch with Duolingo Educational Center</h3>
@@ -115,8 +119,8 @@ function Contact() {
       <div className={style.contactIfo}>
         <h3>Information</h3>
         <div>
-            <p><h4>Phone Number : </h4> +93xxxxxxxxxx</p>
-            <p><h4>Email : </h4> duolingolanguage@gmail.com</p>
+            <p><h4>Phone Number : </h4> +93766379041</p>
+            <p><h4>Email : </h4> hassanalex041@gmail.com</p>
             <p><h4>Address : </h4> Pul-e-Khoshk, Dasht-e-Barchi, Kabul, Afghanistan, Near Imam Zaman Mosque and Dadgar School</p>
             <img src={map} alt="map" />
 

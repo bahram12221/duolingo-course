@@ -7,10 +7,15 @@ import chinese from "./img/chinese.jpg";
 import computer from "./img/computer.jpg";
 import pashto from "./img/pashto.jpg";
 import calligraphy from "./img/calligraphy.jpg";
+import { useLocation } from "react-router-dom";
+
+
 
 function Courses() {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${isHome ? style.bgNone : ""}`}>
       <h1>Our Courses</h1>
       <div className={style.parent}>
         <CoursesComponent

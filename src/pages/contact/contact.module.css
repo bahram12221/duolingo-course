@@ -16,6 +16,15 @@
     align-items: center;
 }
 
+.bgNone{
+    background: none;
+}
+.bgNone::before{
+    background: none;
+}
+.bgNone::after{
+    background: none;
+}
 .container::before {
   content: "";
   position: absolute;
@@ -141,6 +150,7 @@
     .contactIfo, .form{
         width: 80%;
     }
+
     .form input,
 .form textarea{
     margin-bottom: 5px;
@@ -148,5 +158,8 @@
 }
 .btn{
     font-size: 12px;
+}
+.form p, .contactIfo p{
+  font-size: 10px;
 }
 }

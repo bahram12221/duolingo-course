@@ -6,6 +6,10 @@
   color: white;
 }
 
+a li{
+  color: white;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -39,6 +43,7 @@
 }
 .logo h3{
   font-family: 'Permanent Marker', cursive;
+  color: white;
 }
 .logo img{
   width: 110px;
@@ -57,6 +62,7 @@
     right: 20px;
     top: 20px;
     display: block;
+    color: white;
   }
 
   .xmark {
@@ -72,6 +78,7 @@
   }
   .block {
     display: block;
+    color: white;
   }
 
   .humbarger {
@@ -79,7 +86,7 @@
     display: flex;
   }
   .navbar {
-    width: 100px;
+    width: 200px;
     margin-top: 40px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.3);
